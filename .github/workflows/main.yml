@@ -15,3 +15,11 @@ jobs:
         with:
           name: main.pdf
           path: main.pdf
+      - name: Commit pdf
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Dian Wang
+          author_email: wangdian1007@outlook.com
+          message: "Upload pdf"
+          add: "main.pdf"
+          push: true
