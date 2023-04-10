@@ -10,16 +10,10 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: main.tex
-      - name: Store pdf
-        uses: actions/upload-artifact@v2
-        with:
-          name: main.pdf
-          path: main.pdf
       - name: Commit pdf
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: Dian Wang
-          author_email: wangdian1007@outlook.com
+          default_author: github_actions
           message: "Upload pdf"
           add: "main.pdf"
           push: true
