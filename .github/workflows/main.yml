@@ -35,8 +35,8 @@ jobs:
           message: "Upload pdf"
           add: "dian_wang_cv.pdf"
           push: true
-  
   deploy:
+    needs: build_latex
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
