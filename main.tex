@@ -3,9 +3,7 @@
 % Author : Aras Gungore
 % License : MIT
 %------------------------
-
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -13,14 +11,24 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+\usepackage[colorlinks=true, urlcolor=mydarkblue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{hyphenat}
 \usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{array}
 \input{glyphtounicode}
 
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+\bibliographystyle{unsrt}
+
+\setlength{\footskip}{4.08003pt}
 
 %---------- FONT OPTIONS ----------
 % sans-serif
@@ -53,6 +61,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+\setlength{\parskip}{0pt}          % Remove the space between paragraphs
+\setlength{\lineskip}{0pt}         % Remove the minimum space between lines
+\setlength{\lineskiplimit}{0pt}    % Remove the limit for the minimum space between lines
+\setstretch{1}                     % Set the line spacing to single spacing
+
+
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
@@ -70,11 +84,16 @@
   }
 }
 
+\newcommand{\paperItem}[2]{
+  \item[#1]\small{
+    {#2 \vspace{-5pt}}
+  }
+}
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{\small#1} & \small#2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -91,17 +110,32 @@
 \newcommand{\resumeEducationHeading}[6]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{\small#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
       \textit{\small#5} & \textit{\small #6} \\
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcolumntype{P}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\newcommand{\resumeMentorHeading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{p{0.2\textwidth}p{0.57\textwidth}P{0.2\textwidth}}
+      \small #1 & \small #2 &\textit{\small #3}\\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeAwardHeading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{p{0.46\textwidth}p{0.39\textwidth}P{0.12\textwidth}}
+      \small\textbf{#1} & \small #2 &\textit{\small #3}\\
+    \end{tabular*}\vspace{-8pt}
+}
 
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
+    \vspace{-7pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \hspace{13pt}\small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -132,19 +166,19 @@
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\Huge \scshape Aras Güngöre} \\ \vspace{3pt}
+    \textbf{\LARGE \scshape Dian Wang} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:905314204536}{+90 531 420 4536}
+    \faMobile \hspace{.5pt} \href{tel:16176022921}{+1 (617)-602-2921}
     $|$
-    \faAt \hspace{.5pt} \href{mailto:arasgungore09@gmail.com}{arasgungore09@gmail.com}
+    \faAt \hspace{.5pt} \href{mailto:wang.dian@northeastern.neu.edu}{wang.dian@northeastern.neu.edu}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/arasgungore}{LinkedIn}
-    $|$
-    \faGithub \hspace{.5pt} \href{https://github.com/arasgungore}{GitHub}
-    $|$
-    \faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
-    $|$
-    \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Bogazici+University+North+Campus/@41.0863067,29.0441352,15z/data=!4m5!3m4!1s0x0:0x9d2497b07c8edb2f!8m2!3d41.0863067!4d29.0441352}{Istanbul, Turkey}
+    % \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/arasgungore}{LinkedIn}
+    % $|$
+    % \faGithub \hspace{.5pt} \href{https://github.com/arasgungore}{GitHub}
+    % $|$
+    \faGlobe \hspace{.5pt} \href{https://pointw.github.io}{pointw.github.io}
+    % $|$
+    % \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Bogazici+University+North+Campus/@41.0863067,29.0441352,15z/data=!4m5!3m4!1s0x0:0x9d2497b07c8edb2f!8m2!3d41.0863067!4d29.0441352}{Istanbul, Turkey}
 \end{center}
 
 
@@ -152,198 +186,192 @@
 %----------- EDUCATION -----------
 
 \section{Education}
-  \vspace{3pt}
+  % \vspace{3pt}
   \resumeSubHeadingListStart
     
     \resumeEducationHeading
-      {Boğaziçi University
+      {Northeastern University
       % \normalfont{(Admission rate: 0.09\%)}
-      }{Istanbul, Turkey}
-      {B.Sc. in Electrical and Electronics Engineering;   \textbf{GPA: 3.73/4.00}}{Sep 2018 \textbf{--} Jun 2023 (Expected)}
-      {Minor Degree in Computer Engineering;   \textbf{GPA: 3.89/4.00}}{Oct 2020 \textbf{--} Jun 2023 (Expected)}
+      }{Boston, MA, USA}
+      {Ph.D. in Computer Science}{Jan. 2020 \textbf{--} Present}
+      {M.S. in Computer Science;   \textbf{GPA: 4.00/4.00}}{Sept. 2017 \textbf{--} Dec. 2019}
         % \resumeItemListStart
             % \resumeItem{\textbf{Relevant coursework:} Calculus I-II, Matrix Theory, Differential Equations, Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering}
         % \resumeItemListEnd
     
     \resumeSubheading
-      {Kocaeli Science High School
+      {Sichuan University
       % \normalfont{(Admission rate: 0.85\%)}
-      }{Kocaeli, Turkey}
-      {High School Diploma;   \textbf{GPA: 97.03/100}}{Sep 2014 \textbf{--} Jun 2018}
-    
+      }{Chengdu, China}
+      {B.Eng. in Computer Science and Engineering;   \textbf{GPA: 3.56/4.00}}{Sept. 2013 \textbf{--} June 2017}
+\vspace{1pt}
   \resumeSubHeadingListEnd
 
 
 
 %----------- RESEARCH EXPERIENCE -----------
+\section{Experience}
+\resumeSubHeadingListStart
+\vspace{2pt}
+\resumeSubheading
+{The Helping Hands Lab, Northeastern University}{Boston, MA, USA}
+{Research Assistant}{Jan. 2018 \textbf{--} Present}
+% \textbf{Equivariant reinforcement learning in robotic manipulation}
+\resumeProjectHeading{\textbf{Equivariant reinforcement learning in robotic manipulation}}{}
+\resumeItemListStart
+\resumeItem{Defined the symmetric properties of reinforcement learning in robotic manipulation. }
+\resumeItem{Proposed neural network architectures for improving training efficiency in robotic manipulation tasks.}
+\resumeItemListEnd
 
-\section{Research Experience}
-  \vspace{3pt}
-  \resumeSubHeadingListStart
-  
-    \resumeSubheading
-      {Max Planck Institute for Intelligent Systems}{Stuttgart, Baden\textbf{-}Württemberg, Germany}
-      {Undergraduate Research Assistant}{Jun 2022 \textbf{--} Aug 2022}
-        \resumeItemListStart
-            \resumeItem{Worked in the Physical Intelligence Department with Sinan Özgün Demir and Alp Can Karacakol on a project about 3D printing and heat-assisted magnetic programming of soft machines.}
-            \resumeItem{Updated a ROS package for converting 3D motion controller events to ROS messages so that it synchronously operates at any given loop rate.}
-            \resumeItem{Implemented an Arduino Mega driver for controlling a fluid dispenser, a laser, thermocouples, and a coil set. Updated ROS nodes for parsing G-codes and controlling stage movement and built the ROS-Arduino communication network to simulate a 3D printing and magnetic programming process.}
-        \resumeItemListEnd
-    
-    \resumeSubheading
-      {Nanonetworking Research Group, Boğaziçi University}{Istanbul, Turkey}
-      {Undergraduate Research Assistant}{Oct 2021 \textbf{--} Present}
-        \resumeItemListStart
-            \resumeItem{Currently working with Assoc. Prof. Ali Emre Pusane on the project “Design and Implementation of Molecular Communication Systems Using Index Modulation” under the TÜBİTAK 2247-C Intern Researcher Scholarship Program (STAR).}
-            \resumeItem{Simulated the Brownian motion of molecules in a SISO MCvD system and predicted simulation parameters such as receiver radius, diffusion coefficient, and transmitter-receiver distance using CNNs with Python.}
-            \resumeItem{Plotted the arrival of molecules per symbol duration in a SISO MCvD system using Binomial, Poisson, and Gaussian model approximations with MATLAB.}
-            \resumeItem{Ran Monte Carlo simulations of the Gaussian model to encode/decode randomized binary sequences in a SISO MCvD system using BCSK modulation technique and calculated the bit error rate (BER) on Z-channel.}
-        \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
+\resumeProjectHeading{\textbf{BulletArm reinforcement learning environments}}{}
+\resumeItemListStart
+\resumeItem{Implemented an open-sourced robotic reinforcement learning environment library using PyBullet.}
+\resumeItem{Built a real-world experimental platform using a UR5 arm.}
+\resumeItemListEnd
 
+\resumeProjectHeading{\textbf{Policy learning in SE(3) action spaces}}{}
+\resumeItemListStart
+\resumeItem{Designed a reinforcement learning framework for robotic manipulation tasks.}
+\resumeItem{Proposed an imitation learning algorithm for large action spaces.}
+\resumeItemListEnd
 
+\resumeProjectHeading{\textbf{Assistive robotic pick-and-place system}}{}
+\resumeItemListStart
+\resumeItem{Built an assistive robotic system to assist people with disabilities in household manipulation tasks.}
+\resumeItem{Conducted pick-and-place experiments in an open world environment.}
+\resumeItemListEnd
 
-%----------- WORK EXPERIENCE -----------
+\resumeSubheading
+{Institute of Computing Technology, Chinese Academy of Sciences}{Beijing, China}
+{Research Intern}{July. 2016 \textbf{--} Aug. 2026}
+% \textbf{Equivariant reinforcement learning in robotic manipulation}
+\resumeItemListStart
+\resumeItem{Led team of 4 interns to implement a user dynamic detection app based on data from gravity sensor.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-\section{Work Experience}
-  \vspace{3pt}
-  \resumeSubHeadingListStart
-    
-    \resumeSubheading
-      {SESTEK Speech Enabled Software Technologies}{Istanbul, Turkey}
-      {Natural Language Processing R\&D Intern}{Jan 2022 \textbf{--} Feb 2022}
-        \resumeItemListStart
-            \resumeItem{Implemented common NLP tasks using transformers such as named-entity recognition (NER), part-of-speech (POS) tagging, sentiment analysis, text classification, and extractive/generative question answering.}
-            \resumeItem{Built a generative question answering system via Dense Passage Retrieval (DPR) and Retrieval-Augmented Generation (RAG) using the Haystack framework with Python.}
-            \resumeItem{Worked on a custom Turkish open-domain question answering system by fine-tuning a BERT base model transformer. Evaluated the exact match and F1 scores using different Turkish data sets and compared the evaluation results.}
-        \resumeItemListEnd
-    
-    % \resumeSubheading
-      % {Ankara Metropolitan Municipality}{Ankara, Turkey}
-      % {SCADA Engineering Intern}{Aug 2021 \textbf{--} Sep 2021}
-        % \resumeItemListStart
-            % \resumeItem{Designed GSM/GPRS-based electrical control panels that are connected to local water pump automation systems. Pump station panels use digital output data received from the SCADA control center via RF transmission to control valves and pumps. Tank station panels are charged from the PV system and refill water tanks by signaling the pump station panel when the float switch is activated.}
-            % \resumeItem{Implemented motor control circuits by reading their PLC ladder diagrams and analyzed the EPLAN project documentation, HMI, and hardware components of an RTU panel.}
-        % \resumeItemListEnd
+\section{Publications}
+\nobibliography{pub}
+\begin{enumerate}
+\paperItem{18}{\bibentry{wang2023theory}}
+\paperItem{17}{\bibentry{nguyen2023equivariant}}
+\paperItem{16}{\bibentry{huang2023leveraging}}
+\paperItem{15}{\bibentry{zhu2023grasp}}
+\paperItem{14}{\bibentry{wang2023surprising}}
+\paperItem{13}{\bibentry{jia2023seil}}
+\paperItem{12}{\bibentry{huang2023edge}}
+\paperItem{11}{\bibentry{wang2022onrobot}}
+\paperItem{10}{\bibentry{nguyen2022leveraging}}
+\paperItem{9}{\bibentry{wang2022bulletarm}}
+\paperItem{8}{\bibentry{huang2022equivariant}}
+\paperItem{7}{\bibentry{zhu2022sample}}
+\paperItem{6}{\bibentry{wang2022so2}}
+\paperItem{5}{\bibentry{wang2021equivariant}}
+\paperItem{4}{\bibentry{wilkinson2021design}}
+\paperItem{3}{\bibentry{biza2021action}}
+\paperItem{2}{\bibentry{wang2020policy}}
+\paperItem{1}{\bibentry{wang2019assistive}}
+\vspace{3pt}
+\end{enumerate}
+% \nocite{*} % Include all references from the .bib file
+% \printbibliography
 
-    % \vspace{15pt}
-    \resumeSubheading
-      {Meteksan Defense Industry Inc.}{Ankara, Turkey}
-      {Analog Design Engineering Intern}{Jul 2021 \textbf{--} Aug 2021}
-        \resumeItemListStart
-            \resumeItem{Designed numerous analog circuits such as voltage-mode controlled buck converter, phase-shifted full-bridge isolated DC-DC converter, and EMI filters with LTspice. Integrated these circuits and implemented a 320 W power distribution unit to be used in a radar system's power circuit board.}
-            \resumeItem{Researched real-world compatible electronic components to be used in such circuits including GaNFETs, high-side gate drivers, and Schottky diodes.}
-            \resumeItem{Assembled PCBs of both common and differential mode filters and used VNA Bode 100 to measure the cut-off frequencies.}
-        \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
+\section{Presentations}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Equivariant Learning for Robotic Manipulation}{Boston, MA, USA}
+{Boston Robotics Speaker Series, presented by Universal Robots}{Mar. 2023}
+\resumeSubheading
+{On-Robot Learning with Equivariant Models}{Auckland, New Zealand}
+{Conference on Robot Learning (CoRL) 2022}{Dec. 2022}
+\resumeSubheading{Graph-Based SE(3)-invariant Approach to Grasp Detection}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
+\resumeSubheading{SEIL: Simulation-augmented Equivariant Imitation Learning}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
+\resumeSubheading{Equivariant Reinforcement Learning for Robotic Manipulation}{Providence, RI, USA}{The Multi-disciplinary Conference on Reinforcement Learning and Decision Making 2022}{June 2022}
+\resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{New York City, NY, USA}{RSS 2022 Workshop on Scaling Robot Learning
+}{June 2022}
+\resumeSubheading{SO(2)-Equivariant Reinforcement Learning for Robotic Manipulation}{Philadelphia, PA, USA}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
+\resumeSubheading{SO(2)-Equivariant Reinforcement Learning }{Online}{International Conference on Learning Representations (ICLR) 2022}{Apr. 2022}
+\resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2021}{Nov. 2021}
+\resumeSubheading{Policy Learning in SE(3) Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2020}{Nov. 2020}
+\resumeSubheading{Imitation Learning with Pixel-Wise Action Parametrization}{Boston, MA, USA}{M.S. Thesis Defense, Khoury College of Computer Sciences, Northeastern University}{Dec. 2019}
+\resumeSubheading{Towards Assistive Robotic Pick and Place in Open World Environments}{Hanoi, Vietnam}{The International Symposium on Robotics Research (ISRR) 2019}{Dec. 2019}
+\vspace{1pt}
+\resumeSubHeadingListEnd
 
+\section{Teaching}
+\resumeSubHeadingListStart
+\resumeSubheading{Guest Lecture on Leveraging SE(2) Symmetries in Robot Learning}{}{Robotics Science and Systems (Northeastern CS5335), Prof. Robert Platt}{Mar. 2022}
+\vspace{3pt}
+\resumeSubHeadingListEnd
 
+\section{Mentoring}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+\item
+\small
+\begin{tabular*}{0.97\textwidth}[t]{p{0.2\textwidth}p{0.57\textwidth}P{0.2\textwidth}}
+Mingxi Jia &  M.S. Student at Northeastern University &\textit{Dec. 2021 - Present}\\
+Guanang Su &  M.S. Student at Northeastern University &\textit{Dec. 2021 - Present}\\
+Neel Sortur & Undergraduate Student at Northeastern University & \textit{May 2021 - Oct. 2022}\\
+Zhengyi Ou & M.S. Student at Northeastern University & \textit{Sept. 2020 - Dec. 2021}\\
+Yida Niu & M.S. Student at Northeastern University & \textit{Sept. 2020 - Aug. 2021}\\
+\end{tabular*}
+% \vspace{-8pt}
+% \resumeMentorHeading{Mingxi Jia}{M.S. Student at Northeastern University}{Dec. 2021 - Present}
+% \resumeMentorHeading{Guanang Su}{M.S. Student at Northeastern University}{Dec. 2021 - Present}
+% \resumeMentorHeading{Neel Sortur}{Undergraduate Student at Northeastern University}{May 2021 - Oct. 2022}
+% \resumeMentorHeading{Zhengyi Ou}{M.S. Student at Northeastern University}{Sept. 2020 - Dec. 2021}
+% \resumeMentorHeading{Yida Niu}{M.S. Student at Northeastern University}{Sept. 2020 - Aug. 2021}
+% \resumeMentorHeading{Jing Xie}{M.S. Student at Northeastern University}{June 2019 - Jan. 2020}
+\resumeSubHeadingListEnd
+
+\section{Professional Service}
+\resumeSubHeadingListStart
+\small{
+\item \textbf{Lead Organizer}, RSS 2023 Workshop on Symmetries in Robot Learning
+\vspace{-7pt}
+\item \textbf{Reviewer}: ICRA 2023, CoRL 2022, RAL 2022, T-RO 2022, ICRA 2022, IROS 2021, ICRA 2019
+}
+% \vspace{-5pt}
+\resumeSubHeadingListEnd
 
 %----------- AWARDS & ACHIEVEMENTS -----------
 
-\section{Awards \& Achievements}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{National University Admission Exam (YKS):}{ Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500.} \\ \vspace{3pt}
-        
-        \textbf{KYK Outstanding Success Scholarship:}{ Awarded to undergraduate students who have been ranked in the top 100 on National University Admission Exam by Higher Education Credit and Hostels Institution (KYK).} \\ \vspace{3pt}
-        
-        \textbf{Boğaziçi University Success Scholarship:}{ Awarded to undergraduate students who have been ranked in the top 100 on National University Admission Exam by Boğaziçi University.} \\ \vspace{3pt}
-        
-        \textbf{TÜBİTAK 2247-C Intern Researcher Scholarship:}{ Awarded to undergraduate students who take part in research projects carried out by the Scientific and Technological Research Council of Turkey (TÜBİTAK).} \\ \vspace{3pt}
-        
-        \textbf{Duolingo English Test (DET):}{ Overall Score: 135/160} \\ \vspace{3pt}
-        
-        % \textbf{Boğaziçi University English Proficiency Test (BUEPT):}{ Achieved the highest grade A on the BUEPT grading scheme with a total score in the range of 85-100.} \\ \vspace{3pt}
-        
-        \textbf{Kocaeli Science High School Salutatorian Award:}{ Graduated as the second-highest ranked student in my class.}
-    }}
-  \resumeSubHeadingListEnd
-
-
-
-%----------- PROJECTS -----------
-
-\section{Projects}
-    \vspace{3pt}
-    \resumeSubHeadingListStart
-      
-      \resumeProjectHeading
-        {\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch.}
-            \resumeItem{Added recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle in PPM format.}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-        {\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move.}
-            \resumeItem{Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-        {\textbf{Rocket Flight Simulator} $|$ \emph{\href{https://github.com/arasgungore/rocket-flight-simulator}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{A Simulink project which can accurately simulate the motion of a flying rocket in one-dimensional space.}
-            \resumeItem{The project implements the forces acting on a rocket which are drag, weight, and thrust as subsystems that take time-variant parameters into consideration such as distance from the center of Earth, mass and velocity of the rocket, and air density at different layers of Earth's atmosphere.}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-        {\textbf{Netlist Solver} $|$ \emph{\href{https://github.com/arasgungore/netlist-solver}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{A MATLAB project that uses modified nodal analysis (MNA) algorithm to calculate the node voltages of any analog circuit without dependent sources given in netlist format.}
-            \resumeItem{Added a module that sweeps the resistance of a load resistor, plots power dissipation as a function of load resistance, and finds the resistance value corresponding to maximum power.}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-        {\textbf{CMPE 250 Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{Five Java projects assigned for the Data Structures and Algorithms (CMPE 250) course in the Fall 2021-22 semester.}
-            \resumeItem{These projects apply DS\&A concepts such as discrete-event simulation (DES) using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree (MST), Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
-          \resumeItemListEnd
-      
-    \resumeSubHeadingListEnd
-
+\section{Honers \& Awards}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+\item
+\small
+\begin{tabular*}{0.97\textwidth}[t]{p{0.46\textwidth}p{0.39\textwidth}P{0.12\textwidth}}
+\textbf{Best Paper Award Finalist} & ICRA 2022 Workshop on Scaling Robot Learning &\textit{May 2022}\\
+\textbf{Khoury College Graduate Research Fellowship} & Northeastern University &\textit{Aug. 2019}\\
+\textbf{First Place of Outstanding Bachelor’s Thesis} & Sichuan University &\textit{June 2017}\\
+\end{tabular*}
+% \resumeAwardHeading{Best Paper Award Finalist}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
+% \resumeAwardHeading{Khoury College Graduate Research Fellowship}{Northeastern University}{Aug. 2019}
+% \resumeAwardHeading{First Place of Outstanding Bachelor’s Thesis}{Sichuan University}{June 2017}
+\resumeSubHeadingListEnd
 
 
 %----------- SKILLS -----------
 
 \section{Skills}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{Programming:}{ C, C++, Java, Python, MATLAB, R, MySQL, VHDL} \\ \vspace{3pt}
-        
-        \textbf{Technologies:}{ Git, Arduino, ROS, Simulink, LTspice, Xilinx ISE} \\ \vspace{3pt}
-        
-        \textbf{Languages:}{ Turkish (Native), English (Professional), German (Elementary)}
-        
-        % \textbf{Frameworks}{: X, X, X} \\
-        % \textbf{Developer Tools}{: X, X, X} \\
-        % \textbf{Libraries}{: X, X, X} \\
-        % \textbf{Applications}{: X, X, X}
-    }}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\small{\item{
+    \textbf{Programming:} {Python, Java, C++} \\ \vspace{1pt}
+    
+    \textbf{Tools:} {PyCharm, IntelliJ IDEA, Git, LaTeX, Final Cut Pro } \\ \vspace{1pt}
+    
+    \textbf{Robotics:} {UR5, Baxter, Robotic Operating System (ROS), PyBullet, OpenRave}\\ \vspace{1pt}
 
-
-
-%----------- RELEVANT COURSEWORK -----------
-
-\section{Relevant Coursework}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{Major coursework:}{ Calculus I-II, Matrix Theory, Differential Equations, Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering} \\ \vspace{3pt}
-        
-        \textbf{Minor coursework:}{ Discrete Computational Structures, Introduction to Object-Oriented Programming, Data Structures and Algorithms}
-    }}
-  \resumeSubHeadingListEnd
-
-
+    \textbf{Machine Learning:} {PyTorch, NumPy}
+    
+    % \textbf{Frameworks}{: X, X, X} \\
+    % \textbf{Developer Tools}{: X, X, X} \\
+    % \textbf{Libraries}{: X, X, X} \\
+    % \textbf{Applications}{: X, X, X}
+}}
+\resumeSubHeadingListEnd
 
 %----------- CERTIFICATES -----------
 
