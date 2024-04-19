@@ -26,7 +26,7 @@
 
 \usepackage[numbers]{natbib}
 \usepackage{bibentry}
-\bibliographystyle{unsrt}
+\bibliographystyle{abbrv}
 
 \setlength{\footskip}{4.08003pt}
 
@@ -188,7 +188,14 @@
     % \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Bogazici+University+North+Campus/@41.0863067,29.0441352,15z/data=!4m5!3m4!1s0x0:0x9d2497b07c8edb2f!8m2!3d41.0863067!4d29.0441352}{Istanbul, Turkey}
 \end{center}
 
-
+\section{Research Interests}
+\resumeSubHeadingListStart
+\item
+\small
+\begin{tabular*}{0.97\textwidth}[t]{p{0.97\textwidth}}
+Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Reinforcement Learning \\
+\end{tabular*}
+\resumeSubHeadingListEnd
 
 %----------- EDUCATION -----------
 
@@ -200,8 +207,8 @@
       {Northeastern University
       % \normalfont{(Admission rate: 0.09\%)}
       }{Boston, MA, USA}
-      {Ph.D. in Computer Science}{Jan. 2020 \textbf{--} Present}
-      {M.S. in Computer Science;   \textbf{GPA: 4.00/4.00}}{Sept. 2017 \textbf{--} Dec. 2019}
+      {Ph.D. in Computer Science. Advisors: Prof. Robert Platt, Prof. Robin Walters}{Jan. 2020 \textbf{--} Present}
+      {M.S. in Computer Science;   {GPA: 4.00/4.00}}{Sept. 2017 \textbf{--} Dec. 2019}
         % \resumeItemListStart
             % \resumeItem{\textbf{Relevant coursework:} Calculus I-II, Matrix Theory, Differential Equations, Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering}
         % \resumeItemListEnd
@@ -210,7 +217,7 @@
       {Sichuan University
       % \normalfont{(Admission rate: 0.85\%)}
       }{Chengdu, China}
-      {B.Eng. in Computer Science and Engineering;   \textbf{GPA: 3.56/4.00}}{Sept. 2013 \textbf{--} June 2017}
+      {B.Eng. in Computer Science and Engineering;   {GPA: 3.56/4.00}}{Sept. 2013 \textbf{--} June 2017}
 \vspace{1pt}
   \resumeSubHeadingListEnd
 
@@ -222,32 +229,37 @@
 \vspace{2pt}
 
 \resumeSubheading
-{The Helping Hands Lab, Northeastern University}{Boston, MA, USA}
+{Northeastern University}{Boston, MA, USA}
 {Research Assistant}{Jan. 2018 \textbf{--} Present}
-% \textbf{Equivariant reinforcement learning in robotic manipulation}
-\resumeProjectHeading{\textbf{Equivariant reinforcement learning in robotic manipulation}}{}
 \resumeItemListStart
-\resumeItem{Defined the symmetric properties of reinforcement learning in robotic manipulation. }
-\resumeItem{Proposed neural network architectures for improving training efficiency in robotic manipulation tasks.}
-\resumeItemListEnd
-
-\resumeProjectHeading{\textbf{BulletArm reinforcement learning environments}}{}
-\resumeItemListStart
+\resumeItem{Proposed symmetric neural network architectures for improving training efficiency in robotic manipulation tasks.}
 \resumeItem{Implemented an open-sourced robotic reinforcement learning environment library using PyBullet.}
-\resumeItem{Built a real-world experimental platform using a UR5 arm.}
-\resumeItemListEnd
-
-\resumeProjectHeading{\textbf{Policy learning in SE(3) action spaces}}{}
-\resumeItemListStart
-\resumeItem{Designed a reinforcement learning framework for robotic manipulation tasks.}
-\resumeItem{Proposed an imitation learning algorithm for large action spaces.}
-\resumeItemListEnd
-
-\resumeProjectHeading{\textbf{Assistive robotic pick-and-place system}}{}
-\resumeItemListStart
 \resumeItem{Built an assistive robotic system to assist people with disabilities in household manipulation tasks.}
-\resumeItem{Conducted pick-and-place experiments in an open world environment.}
 \resumeItemListEnd
+% \textbf{Equivariant reinforcement learning in robotic manipulation}
+% \resumeProjectHeading{\textbf{Equivariant learning in robotic manipulation}}{}
+% \resumeItemListStart
+% \resumeItem{Defined the symmetric properties of policy learning in robotic manipulation. }
+% \resumeItem{Proposed symmetric neural network architectures for improving training efficiency in robotic manipulation tasks.}
+% \resumeItemListEnd
+
+% \resumeProjectHeading{\textbf{BulletArm reinforcement learning environments}}{}
+% \resumeItemListStart
+% \resumeItem{Implemented an open-sourced robotic reinforcement learning environment library using PyBullet.}
+% \resumeItem{Built a real-world experimental platform using a UR5 arm.}
+% \resumeItemListEnd
+
+% % \resumeProjectHeading{\textbf{Policy learning in SE(3) action spaces}}{}
+% % \resumeItemListStart
+% % \resumeItem{Designed a reinforcement learning framework for robotic manipulation tasks.}
+% % \resumeItem{Proposed an imitation learning algorithm for large action spaces.}
+% % \resumeItemListEnd
+
+% \resumeProjectHeading{\textbf{Assistive robotic pick-and-place system}}{}
+% \resumeItemListStart
+% \resumeItem{Built an assistive robotic system to assist people with disabilities in household manipulation tasks.}
+% \resumeItem{Conducted pick-and-place experiments in an open world environment.}
+% \resumeItemListEnd
 
 \resumeSubheading
 {Boston Dynamics AI Institute}{Cambridge, MA, USA}
@@ -265,9 +277,15 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+
 \section{Publications}
 \nobibliography{dian_wang_cv}
+
 \begin{enumerate}
+
+\paperItem{22}{\bibentry{wang2024diffusion}}
+\paperItem{21}{\bibentry{zhu2024se3}}
+\paperItem{20}{\bibentry{jia2024open}}
 \paperItem{19}{\bibentry{huang2023fourier}}
 \paperItem{18}{\bibentry{huang2023leveraging}}
 \paperItem{17}{\bibentry{wang2023theory}}
@@ -292,17 +310,36 @@
 % \nocite{*} % Include all references from the .bib file
 % \printbibliography
 
-\section{Presentations}
+\section{Honers and Awards}
+\vspace{-2pt}
 \resumeSubHeadingListStart
+\item
+\small
+\begin{tabular*}{0.97\textwidth}[t]{p{0.46\textwidth}p{0.39\textwidth}P{0.12\textwidth}}
+\textbf{2023 JPMorgan Chase PhD Fellowship} & JPMorgan Chase &\textit{June 2023}\\
+\textbf{Best Paper Award Finalist} & ICRA 2022 Workshop on Scaling Robot Learning &\textit{May 2022}\\
+\textbf{Khoury College Graduate Research Fellowship} & Northeastern University &\textit{Aug. 2019}\\
+% \textbf{First Place of Outstanding Bachelor’s Thesis} & Sichuan University &\textit{June 2017}\\
+\end{tabular*}
+% \resumeAwardHeading{Best Paper Award Finalist}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
+% \resumeAwardHeading{Khoury College Graduate Research Fellowship}{Northeastern University}{Aug. 2019}
+% \resumeAwardHeading{First Place of Outstanding Bachelor’s Thesis}{Sichuan University}{June 2017}
+\resumeSubHeadingListEnd
+
+\section{Talks and Oral Presentations}
+\resumeSubHeadingListStart
+% \resumeSubheading
+% {A General Theory of Correct, Incorrect, and Extrinsic Equivariance}{New Orleans, USA}
+% {Conference on Neural Information Processing Systems (NeurIPS) 2023}{Dec. 2023}
+% \resumeSubheading
+% {The Surprising Effectiveness of Equivariant Models in Domains with Latent Symmetry}{New Orleans, USA}
+% {NeurIPS 2023 Workshop on Symmetry and Geometry in Neural Representations}{Dec. 2023}
+% \resumeSubheading
+% {Correct, Incorrect, and Extrinsic Equivariance}{New York City, NY, USA}
+% {NSF-Simons Mathematical and Scientific Foundations of Deep Learning Annual Meeting}{Sept. 2023}
 \resumeSubheading
-{A General Theory of Correct, Incorrect, and Extrinsic Equivariance}{New Orleans, USA}
-{Conference on Neural Information Processing Systems (NeurIPS) 2023}{Dec. 2023}
-\resumeSubheading
-{The Surprising Effectiveness of Equivariant Models in Domains with Latent Symmetry}{New Orleans, USA}
-{NeurIPS 2023 Workshop on Symmetry and Geometry in Neural Representations}{Dec. 2023}
-\resumeSubheading
-{Correct, Incorrect, and Extrinsic Equivariance}{New York City, NY, USA}
-{NSF-Simons Mathematical and Scientific Foundations of Deep Learning Annual Meeting}{Sept. 2023}
+{Equivariant Models for Long-Horizon Manipulation}{Boston, MA, USA}
+{Boston Dynamics AI Institute}{Mar. 2024}
 \resumeSubheading
 {The Surprising Effectiveness of Equivariant Models in Domains with Latent Symmetry}{Kigali, Rwanda}
 {International Conference on Learning Representations (ICLR) 2023}{May 2023}
@@ -312,27 +349,28 @@
 \resumeSubheading
 {Equivariant Learning for Robotic Manipulation}{Boston, MA, USA}
 {Boston Robotics Speaker Series, presented by Universal Robots}{Mar. 2023}
-\resumeSubheading
-{On-Robot Learning with Equivariant Models}{Auckland, New Zealand}
-{Conference on Robot Learning (CoRL) 2022}{Dec. 2022}
-\resumeSubheading{Graph-Based SE(3)-invariant Approach to Grasp Detection}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
-\resumeSubheading{SEIL: Simulation-augmented Equivariant Imitation Learning}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
-\resumeSubheading{Equivariant Reinforcement Learning for Robotic Manipulation}{Providence, RI, USA}{The Multi-disciplinary Conference on Reinforcement Learning and Decision Making 2022}{June 2022}
+% \resumeSubheading
+% {On-Robot Learning with Equivariant Models}{Auckland, New Zealand}
+% {Conference on Robot Learning (CoRL) 2022}{Dec. 2022}
+% \resumeSubheading{Graph-Based SE(3)-invariant Approach to Grasp Detection}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
+% \resumeSubheading{SEIL: Simulation-augmented Equivariant Imitation Learning}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
+% \resumeSubheading{Equivariant Reinforcement Learning for Robotic Manipulation}{Providence, RI, USA}{The Multi-disciplinary Conference on Reinforcement Learning and Decision Making 2022}{June 2022}
 \resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{New York City, NY, USA}{RSS 2022 Workshop on Scaling Robot Learning
 }{June 2022}
 \resumeSubheading{SO(2)-Equivariant Reinforcement Learning for Robotic Manipulation}{Philadelphia, PA, USA}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
-\resumeSubheading{SO(2)-Equivariant Reinforcement Learning }{Online}{International Conference on Learning Representations (ICLR) 2022}{Apr. 2022}
-\resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2021}{Nov. 2021}
-\resumeSubheading{Policy Learning in SE(3) Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2020}{Nov. 2020}
-\resumeSubheading{Imitation Learning with Pixel-Wise Action Parametrization}{Boston, MA, USA}{M.S. Thesis Defense, Khoury College of Computer Sciences, Northeastern University}{Dec. 2019}
+% \resumeSubheading{SO(2)-Equivariant Reinforcement Learning }{Online}{International Conference on Learning Representations (ICLR) 2022}{Apr. 2022}
+% \resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2021}{Nov. 2021}
+% \resumeSubheading{Policy Learning in SE(3) Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2020}{Nov. 2020}
+% \resumeSubheading{Imitation Learning with Pixel-Wise Action Parametrization}{Boston, MA, USA}{M.S. Thesis Defense, Khoury College of Computer Sciences, Northeastern University}{Dec. 2019}
 \resumeSubheading{Towards Assistive Robotic Pick and Place in Open World Environments}{Hanoi, Vietnam}{The International Symposium on Robotics Research (ISRR) 2019}{Dec. 2019}
 \vspace{1pt}
 \resumeSubHeadingListEnd
 
 \section{Teaching}
 \resumeSubHeadingListStart
-\resumeSubheading{Guest Lecture on Leveraging SE(2) Symmetries in Robot Learning}{}{Robotics Science and Systems (Northeastern CS5335), Prof. Robert Platt}{Mar. 2022}
+\resumeSubheading{Guest Lecture on Equivariant Reinforcement Learning for Robotic Manipulation}{}{Reinforcement Learning and Sequential Decision Making (Northeastern CS5180), Prof. Lawson Wong}{Apr. 2024}
 \resumeSubheading{Guest Lecture on Equivariant Learning for Robotic Manipulation}{}{Geometric Deep Learning (Northeastern CS7180), Prof. Robin Walters}{Apr. 2023}
+\resumeSubheading{Guest Lecture on Leveraging SE(2) Symmetries in Robot Learning}{}{Robotics Science and Systems (Northeastern CS5335), Prof. Robert Platt}{Mar. 2022}
 \vspace{3pt}
 \resumeSubHeadingListEnd
 
@@ -342,6 +380,7 @@
 \item
 \small
 \begin{tabular*}{0.97\textwidth}[t]{p{0.13\textwidth}p{0.26\textwidth}p{0.38\textwidth}P{0.2\textwidth}}
+Haibo Zhao &  M.S. at Northeastern & &\textit{Nov. 2023 - Present}\\
 Mingxi Jia &  M.S. at Northeastern & Now Ph.D. Student at Brown&\textit{Dec. 2021 - May 2023}\\
 Guanang Su &  M.S. at Northeastern & Now Ph.D. Student at Univ. of Minnesota&\textit{Dec. 2021 - May 2023}\\
 Neel Sortur & Undergrad. at Northeastern && \textit{May 2021 - Oct. 2022}\\
@@ -362,29 +401,34 @@ Yida Niu & M.S. at Northeastern && \textit{Sept. 2020 - Aug. 2021}\\
 \small{
 \item \textbf{Lead Organizer}, RSS 2023 Workshop on Symmetries in Robot Learning
 \vspace{-7pt}
-\item \textbf{Reviewer}: ICLR 2024, 2023. NeurIPS 2023. ICRA 2024, 2023, 2022, 2019. CoRL 2023, 2022. IROS 2023, 2021. RAL 2023, 2022. T-RO 2022.
+\item \textbf{Organizer}, RSS 2024 Workshop on Geometric and Algebraic Structure in Robot Learning
+\vspace{-7pt}
+\item \textbf{Reviewer}: IJRR2024. ICML 2024. ICLR 2023-2024. NeurIPS 2023. ICRA 2019, 2022-2024. CoRL 2022-2023. IROS 2021, 2023. RAL 2022-2024. T-RO 2022.
 }
 % \vspace{-5pt}
 \resumeSubHeadingListEnd
 
 %----------- AWARDS & ACHIEVEMENTS -----------
 
-\section{Honers \& Awards}
-\vspace{-2pt}
+\section{Media Coverage}
 \resumeSubHeadingListStart
 \item
 \small
-\begin{tabular*}{0.97\textwidth}[t]{p{0.46\textwidth}p{0.39\textwidth}P{0.12\textwidth}}
-\textbf{2023 JPMorgan Chase PhD Fellowship} & JPMorgan Chase &\textit{June 2023}\\
-\textbf{Best Paper Award Finalist} & ICRA 2022 Workshop on Scaling Robot Learning &\textit{May 2022}\\
-\textbf{Khoury College Graduate Research Fellowship} & Northeastern University &\textit{Aug. 2019}\\
-% \textbf{First Place of Outstanding Bachelor’s Thesis} & Sichuan University &\textit{June 2017}\\
+\begin{tabular*}{0.97\textwidth}[t]{p{0.85\textwidth}P{0.12\textwidth}}
+Institute for Experiential Robotics Newsletter, Dian Wang - CoRL 2022 Presentation &\textit{Jan. 2023}\\
+Northeastern Global News, photo by Matthew Modoono, \href{https://news.northeastern.edu/2020/09/28/machine-learning/}{\underline{Link}} &\textit{Sept. 2020}\\
+IEEE Spectrum Video Friday, \href{https://spectrum.ieee.org/video-friday-misty-robotics-shipping-programmable-personal-robot}{\underline{Link}} &\textit{Sept. 2019}\\
 \end{tabular*}
-% \resumeAwardHeading{Best Paper Award Finalist}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
-% \resumeAwardHeading{Khoury College Graduate Research Fellowship}{Northeastern University}{Aug. 2019}
-% \resumeAwardHeading{First Place of Outstanding Bachelor’s Thesis}{Sichuan University}{June 2017}
 \resumeSubHeadingListEnd
 
+\section{Outreach}
+\resumeSubHeadingListStart
+\item
+\small
+\begin{tabular*}{0.97\textwidth}[t]{p{0.85\textwidth}P{0.12\textwidth}}
+AI in Action - Everyday Robotics, presentation and demo at Northeastern University & \textit{Apr. 2024}\\
+\end{tabular*}
+\resumeSubHeadingListEnd
 
 %----------- SKILLS -----------
 
@@ -393,9 +437,9 @@ Yida Niu & M.S. at Northeastern && \textit{Sept. 2020 - Aug. 2021}\\
 \small{\item{
     \textbf{Programming:} {Python, Java, C++} \\ \vspace{1pt}
     
-    \textbf{Tools:} {PyCharm, IntelliJ IDEA, Git, LaTeX, Final Cut Pro } \\ \vspace{1pt}
+    \textbf{Tools:} {VSCode, PyCharm, IntelliJ IDEA, Git, LaTeX, Final Cut Pro } \\ \vspace{1pt}
     
-    \textbf{Robotics:} {UR5, Baxter, Robotic Operating System (ROS), PyBullet, OpenRave}\\ \vspace{1pt}
+    \textbf{Robotics:} {Franka Emika, UR5, Baxter, Robotic Operating System (ROS), PyBullet, OpenRave}\\ \vspace{1pt}
 
     \textbf{Machine Learning:} {PyTorch, NumPy}
     
