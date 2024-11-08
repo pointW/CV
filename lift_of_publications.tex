@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{times}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage[caption=false, font=footnotesize]{subfig}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{mathtools}
+\usepackage{makecell}
+\usepackage{bbm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{enumitem,kantlipsum}
+\usepackage[numbers]{natbib}
+\usepackage{multicol}
+\usepackage[margin=0.9in]{geometry}
+% \usepackage{titling}
+\usepackage{authblk}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{bibentry}
+\bibliographystyle{abbrv}
+
+
+% Setup for header
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{Dian Wang} % Left side of the header
+\fancyhead[C]{{List of Publications}} % Center of the header
+\fancyhead[R]{wang.dian@northeastern.edu} % Right side of the header
+\renewcommand{\headrulewidth}{0.4pt} % Add a horizontal line below the header
+
+% Enable page number in the footer
+% \fancyfoot[C]{\thepage} % Page number in the center of the footer
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NavyBlue,
+    filecolor=magenta,      
+    urlcolor=NavyBlue,
+    citecolor=NavyBlue,
+    }
+    
+\titlespacing*{\section}
+{0pt}{2pt}{2pt}
+\titlespacing*{\subsection}
+{0pt}{2pt}{2pt}
+\titlespacing*{\subsubsection}
+{0pt}{2pt}{2pt}
+\titlespacing*{\paragraph}
+{0pt}{2pt}{2pt}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% remove parindent, squeeze grafs
+\setlength{\parindent}{0in}
+\setlength{\parskip}{1ex}
+
+\renewcommand\Affilfont{\small}
+
+\newcommand{\paperItem}[2]{
+  \item[#1]\small{
+    {#2 \vspace{-5pt}}
+  }
+}
+
+\title{Research Statement}
+\author{Dian Wang}
+\affil{Khoury College of Computer Sciences\\
+Northeastern University}
+\date{}
+
+\begin{document}
+
+\nobibliography{dian_wang_cv}
+\textsc{Conference Papers}
+\vspace{-0.1cm}
+\begin{enumerate}
+\paperItem{C19}{\bibentry{wang2024diffusion}}
+\paperItem{C18}{\bibentry{hu2024orbit}}
+\paperItem{C17}{\bibentry{huang2024imagination}}
+\paperItem{C16}{\bibentry{huang2023fourier}}
+\paperItem{C15}{\bibentry{wang2023theory}}
+\paperItem{C14}{\bibentry{nguyen2023equivariant}}
+\paperItem{C13}{\bibentry{wang2023surprising}}
+\paperItem{C12}{\bibentry{jia2023seil}}
+\paperItem{C11}{\bibentry{huang2023edge}}
+\paperItem{C10}{\bibentry{wang2022onrobot}}
+\paperItem{C9}{\bibentry{nguyen2022leveraging}}
+\paperItem{C8}{\bibentry{wang2022bulletarm}}
+\paperItem{C7}{\bibentry{huang2022equivariant}}
+\paperItem{C6}{\bibentry{zhu2022sample}}
+\paperItem{C5}{\bibentry{wang2022so2}}
+\paperItem{C4}{\bibentry{wang2021equivariant}}
+\paperItem{C3}{\bibentry{biza2021action}}
+\paperItem{C2}{\bibentry{wang2020policy}}
+\paperItem{C1}{\bibentry{wang2019assistive}}
+\end{enumerate}
+
+\textsc{Journal Papers}
+\vspace{-0.1cm}
+\begin{enumerate}
+\paperItem{J3}{\bibentry{huang2023leveraging}}
+\paperItem{J2}{\bibentry{zhu2023grasp}}
+\paperItem{J1}{\bibentry{wilkinson2021design}}
+\end{enumerate}
+
+\textsc{Preprints}
+\vspace{-0.1cm}
+\begin{enumerate}
+\paperItem{P3}{\bibentry{huang2024match}}
+\paperItem{P2}{\bibentry{tangri2024equivariant}}
+% \paperItem{P3}{\bibentry{zhu2024se3}}
+\paperItem{P1}{\bibentry{jia2024open}}
+% \paperItem{P1}{\bibentry{klee2024reducing}}
+\end{enumerate}
+
+
+\end{document}
