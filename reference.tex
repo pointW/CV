@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{times}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage[caption=false, font=footnotesize]{subfig}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{mathtools}
+\usepackage{makecell}
+\usepackage{bbm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{enumitem,kantlipsum}
+\usepackage[numbers]{natbib}
+\usepackage{multicol}
+\usepackage[margin=0.9in]{geometry}
+% \usepackage{titling}
+\usepackage{authblk}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NavyBlue,
+    filecolor=magenta,      
+    urlcolor=NavyBlue,
+    citecolor=NavyBlue,
+    }
+    
+\titlespacing*{\section}
+{0pt}{2pt}{2pt}
+\titlespacing*{\subsection}
+{0pt}{2pt}{2pt}
+\titlespacing*{\subsubsection}
+{0pt}{2pt}{2pt}
+\titlespacing*{\paragraph}
+{0pt}{2pt}{2pt}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% remove parindent, squeeze grafs
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.7ex}
+\setlength{\topsep}{0.7ex} % Change 10pt to the desired spacing
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{assumption}{Assumption}[section]
+
+\newcommand{\SE}{\mathrm{SE}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\inv}{\mathrm{inv}}
+\newcommand{\reg}{\mathrm{reg}}
+\newcommand{\equi}{\mathrm{equiv}}
+
+\renewcommand\Affilfont{\small}
+
+% \title{Research Statement}
+% \author{Dian Wang}
+% \affil{Khoury College of Computer Sciences\\
+% Northeastern University}
+% \date{}
+
+% Setup for header
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{Dian Wang} % Left side of the header
+\fancyhead[C]{{Reference}} % Center of the header
+\fancyhead[R]{wang.dian@northeastern.edu} % Right side of the header
+\renewcommand{\headrulewidth}{0.4pt} % Add a horizontal line below the header
+
+% Enable page number in the footer
+% \fancyfoot[C]{\thepage} % Page number in the center of the footer
+
+\begin{document}
+\section*{Reference}
+\vspace{0.5cm}
+\textbf{Robert Platt}\\
+Associate Professor\\
+Khoury College of Computer Sciences\\
+Northeastern University\\
+\texttt{rplatt@ccs.neu.edu}\\
+
+\textbf{Robin Walters}\\
+Assistant Professor\\
+Khoury College of Computer Sciences\\
+Northeastern University\\
+\texttt{r.walters@northeastern.edu}\\
+
+\textbf{Shuran Song}\\
+Assistant Professor\\
+Department of Electrical Engineering\\
+Stanford University\\
+\texttt{shuran@stanford.edu}\\
+
+\textbf{Jiuguang Wang}\\
+Research Lead\\
+Boston Dynamics AI Institute\\
+\texttt{jw@theaiinstitute.com}\\
+
+\textbf{Stefanie Tellex}\\
+Associate Professor\\
+Computer Science Department\\
+Brown University\\
+\texttt{stefanie\_tellex@brown.edu}
+\end{document}
