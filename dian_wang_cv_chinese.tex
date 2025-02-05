@@ -1,9 +1,10 @@
+\documentclass[letterpaper,12pt]{ctexart}
 %-------------------------
 % Resume in Latex
 % Author : Aras Gungore
 % License : MIT
 %------------------------
-\documentclass[letterpaper,11pt]{article}
+% \documentclass[letterpaper,11pt]{ctexart}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -22,7 +23,7 @@
 \usepackage{setspace}
 \usepackage{url}
 \usepackage{array}
-\input{glyphtounicode}
+% \input{glyphtounicode}
 
 \usepackage[numbers]{natbib}
 \usepackage{bibentry}
@@ -65,16 +66,16 @@
 \setlength{\parskip}{0pt}          % Remove the space between paragraphs
 \setlength{\lineskip}{0pt}         % Remove the minimum space between lines
 \setlength{\lineskiplimit}{0pt}    % Remove the limit for the minimum space between lines
-\setstretch{1}                     % Set the line spacing to single spacing
+\setstretch{1.1}                     % Set the line spacing to single spacing
 
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\normalsize\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
@@ -95,7 +96,7 @@
   \vspace{-4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\small#1} & \small#2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      {\small#3} & {\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -103,8 +104,8 @@
   \vspace{-4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\small#1} & \small#2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \textit{\small #6} \\
+      {\small#3} & {\small #4} \\
+      {\small#5} & {\small #6} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -112,7 +113,7 @@
 \newcommand{\resumeSubSubheading}[2]{
     \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      {\small#1} & {\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -121,8 +122,8 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\small#1} & \small #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \textit{\small #6} \\
+      {\small#3} & {\small #4} \\
+      {\small#5} & {\small #6} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -131,14 +132,14 @@
 \newcommand{\resumeMentorHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}[t]{p{0.2\textwidth}p{0.57\textwidth}P{0.2\textwidth}}
-      \small #1 & \small #2 &\textit{\small #3}\\
+      \small #1 & \small #2 &{\small #3}\\
     \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeAwardHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}[t]{p{0.46\textwidth}p{0.39\textwidth}P{0.12\textwidth}}
-      \small\textbf{#1} & \small #2 &\textit{\small #3}\\
+      \small\textbf{#1} & \small #2 &{\small #3}\\
     \end{tabular*}\vspace{-8pt}
 }
 
@@ -153,8 +154,8 @@
 \newcommand{\resumeOrganizationHeading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
+      \textbf{#1} & {\small #2} \\
+      {\small#3}
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -176,7 +177,7 @@
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\LARGE \scshape Dian Wang} \\ \vspace{3pt}
+    \textbf{\large \scshape 个人简历} \\ \vspace{3pt}
     \small
     % \faMobile \hspace{.5pt} \href{tel:16176022921}{+1 (617)-602-2921}
     % $|$
@@ -198,43 +199,53 @@
     % \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Bogazici+University+North+Campus/@41.0863067,29.0441352,15z/data=!4m5!3m4!1s0x0:0x9d2497b07c8edb2f!8m2!3d41.0863067!4d29.0441352}{Istanbul, Turkey}
 \end{center}
 
-\section{Research Interests}
+\section{个人信息}
 \resumeSubHeadingListStart
 \item
 \small
 \begin{tabular*}{0.97\textwidth}[t]{p{0.97\textwidth}}
-Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Reinforcement Learning \\
+姓名: 王点 \hfill 性别: 男 \hfill 出生年月: 1994.10\\
+研究方向：具身智能、人工智能、机器人学习、几何深度学习、机器人操纵与抓取、强化学习
 \end{tabular*}
 \resumeSubHeadingListEnd
 
+% \section{研究方向}
+% \resumeSubHeadingListStart
+% \item
+% \small
+% \begin{tabular*}{0.97\textwidth}[t]{p{0.97\textwidth}}
+% 具身智能、机器人学习、几何深度学习、机器人操纵与抓取、强化学习 \\
+% \end{tabular*}
+% \resumeSubHeadingListEnd
+
 %----------- EDUCATION -----------
 
-\section{Education}
+\section{教育背景}
   % \vspace{3pt}
   \resumeSubHeadingListStart
     
     \resumeEducationHeading
-      {Northeastern University
+      {美国东北大学
       % \normalfont{(Admission rate: 0.09\%)}
-      }{Boston, MA, USA}
-      {Ph.D. in Computer Science. Advisors: Prof. Robert Platt, Prof. Robin Walters}{Jan. 2020 \textbf{--} Present}
-      {M.S. in Computer Science;   {GPA: 4.00/4.00}}{Sept. 2017 \textbf{--} Dec. 2019}
+      }{美国马萨诸塞州波士顿}
+      {计算机科学博士。指导老师: Prof. Robert Platt, Prof. Robin Walters}{2020.01 \textbf{--} 至今}
+      {计算机科学硕士。   {GPA: 4.00/4.00}}{2017.09 \textbf{--} 2019.12}
         % \resumeItemListStart
             % \resumeItem{\textbf{Relevant coursework:} Calculus I-II, Matrix Theory, Differential Equations, Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering}
         % \resumeItemListEnd
     
     \resumeSubheading
-      {Sichuan University
+      {四川大学
       % \normalfont{(Admission rate: 0.85\%)}
-      }{Chengdu, China}
-      {B.Eng. in Computer Science and Engineering;   {GPA: 3.56/4.00}}{Sept. 2013 \textbf{--} June 2017}
+      }{中国四川省成都市}
+      {计算机科学与技术学士。   {GPA: 3.56/4.00}}{2013.09 \textbf{--} 2017.06}
 \vspace{1pt}
   \resumeSubHeadingListEnd
 
 
 
 %----------- RESEARCH EXPERIENCE -----------
-\section{Experience}
+\section{工作经历}
 \resumeSubHeadingListStart
 \vspace{2pt}
 
@@ -275,8 +286,11 @@ Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Rein
 % \resumeItemListEnd
 
 \resumeSubheading
-{Boston Dynamics AI Institute}{Cambridge, MA, USA}
-{Research Intern}{May 2023 \textbf{--} Aug. 2023; May 2024 \textbf{--} Aug. 2024}
+{波士顿动力人工智能研究院}{美国马萨诸塞州剑桥}
+{科研实习生（科研岗）}{2024.05 \textbf{--} 2024.08}
+\resumeSubheading
+{波士顿动力人工智能研究院}{美国马萨诸塞州剑桥}
+{科研实习生（科研岗）}{2023.05 \textbf{--} 2023.08}
 % \resumeEducationHeading
 % {Boston Dynamics AI Institute}{Cambridge, MA, USA}
 % {Research Intern}{May 2023 \textbf{--} Aug. 2023}{Research Intern}{May 2024 \textbf{--} Aug. 2024}
@@ -296,17 +310,17 @@ Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Rein
 \resumeSubHeadingListEnd
 
 
-\section{Publications}
-\nobibliography{dian_wang_cv}
-\textsc{Conference Papers}
+\section{发表论文}
+\nobibliography{dian_wang_cv_chinese}
+\textsc{会议论文}
 \vspace{-0.1cm}
 \begin{enumerate}
-\paperItem{C20}{\bibentry{huang2024match}}
 \paperItem{C19}{\bibentry{wang2024diffusion}}
 \paperItem{C18}{\bibentry{hu2024orbit}}
 \paperItem{C17}{\bibentry{huang2024imagination}}
 \paperItem{C16}{\bibentry{huang2023fourier}}
 \paperItem{C15}{\bibentry{wang2023theory}}
+\vspace{-0.5cm}
 \paperItem{C14}{\bibentry{nguyen2023equivariant}}
 \paperItem{C13}{\bibentry{wang2023surprising}}
 \paperItem{C12}{\bibentry{jia2023seil}}
@@ -322,8 +336,8 @@ Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Rein
 \paperItem{C2}{\bibentry{wang2020policy}}
 \paperItem{C1}{\bibentry{wang2019assistive}}
 \end{enumerate}
-\vspace{-0.3cm}
-\textsc{Journal Papers}
+% \vspace{-0.3cm}
+\textsc{期刊论文}
 \vspace{-0.1cm}
 \begin{enumerate}
 \paperItem{J3}{\bibentry{huang2023leveraging}}
@@ -331,9 +345,10 @@ Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Rein
 \paperItem{J1}{\bibentry{wilkinson2021design}}
 \end{enumerate}
 
-\textsc{Workshop Papers}
+\textsc{研讨会论文}
 \vspace{-0.1cm}
 \begin{enumerate}
+% wang2024correctws
 \paperItem{W9}{\bibentry{wang2024correctws}}
 \paperItem{W8}{\bibentry{jia2024equivariantws}}
 \paperItem{W7}{\bibentry{wang2023thews}}
@@ -343,12 +358,13 @@ Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Rein
 \paperItem{W3}{\bibentry{wang2022equiws}}
 \paperItem{W2}{\bibentry{zhu2022samplews}}
 \paperItem{W1}{\bibentry{huang2022equivariantws}}
+% \paperItem{P1}{\bibentry{klee2024reducing}}
 \end{enumerate}
 
-\textsc{Preprints}
+\textsc{预印论文}
 \vspace{-0.1cm}
 \begin{enumerate}
-\paperItem{P3}{\bibentry{zhu2025coarse}}
+\paperItem{P3}{\bibentry{huang2024match}}
 \paperItem{P2}{\bibentry{tangri2024equivariant}}
 % \paperItem{P3}{\bibentry{zhu2024se3}}
 \paperItem{P1}{\bibentry{jia2024open}}
@@ -359,165 +375,136 @@ Robot Learning, Geometric Deep Learning, Robotic Manipulation and Grasping, Rein
 % \nocite{*} % Include all references from the .bib file
 % \printbibliography
 
-\section{Honors and Awards}
+\section{荣誉奖项}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 \item
 \small
 \begin{tabular*}{0.97\textwidth}[t]{p{0.46\textwidth}p{0.39\textwidth}P{0.12\textwidth}}
-\textbf{Best Paper Award Finalist} & Conference on Robot Learning (CoRL) 2024 &\textit{Nov. 2024}\\
-\textbf{2023 JPMorgan Chase Ph.D. Fellowship} & JPMorgan Chase &\textit{June 2023}\\
-\textbf{Best Paper Award Finalist} & ICRA 2022 Scaling Robot Learning Workshop&\textit{May 2022}\\
-\textbf{Khoury College Graduate Research Fellowship} & Northeastern University &\textit{Aug. 2019}\\
-% \textbf{First Place of Outstanding Bachelor’s Thesis} & Sichuan University &\textit{June 2017}\\
+\textbf{最佳论文提名奖} & 机器人学习会议 (CoRL) 2024 &{2024.11}\\
+\textbf{2023 摩根大通博士奖学金} & 摩根大通 &{2023.06}\\
+\textbf{最佳论文提名奖} & ICRA 2022 《机器人学习扩展》研讨会&{2022.05}\\
+\textbf{东北大学Khoury科研奖学金} & 东北大学 &{2019.08}\\
+% \textbf{First Place of Outstanding Bachelor’s Thesis} & Sichuan University &{June 2017}\\
 \end{tabular*}
 % \resumeAwardHeading{Best Paper Award Finalist}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
 % \resumeAwardHeading{Khoury College Graduate Research Fellowship}{Northeastern University}{Aug. 2019}
 % \resumeAwardHeading{First Place of Outstanding Bachelor’s Thesis}{Sichuan University}{June 2017}
 \resumeSubHeadingListEnd
 
-\section{Teaching}
+\section{学术服务}
 \resumeSubHeadingListStart
-\resumeSubheading{Teaching Assistant}{}{Reinforcement Learning and Sequential Decision Making (Northeastern CS5180), Prof. Chris Amato}{Fall 2024}
-\resumeSubheading{Guest Lecture on Equivariant Policy Learning for Robotic Manipulation}{}{Algorithmic Robotics (Rice University Comp550), Prof. Lydia Kavraki}{Nov. 2024}
-\resumeSubheading{Guest Lecture on Equivariant Reinforcement Learning for Robotic Manipulation}{}{Reinforcement Learning and Sequential Decision Making (Northeastern CS5180), Prof. Lawson Wong}{Apr. 2024}
-\resumeSubheading{Guest Lecture on Equivariant Learning for Robotic Manipulation}{}{Geometric Deep Learning (Northeastern CS7180), Prof. Robin Walters}{Apr. 2023}
-\resumeSubheading{Guest Lecture on Leveraging SE(2) Symmetries in Robot Learning}{}{Robotics Science and Systems (Northeastern CS5335), Prof. Robert Platt}{Mar. 2022}
+\small{
+\item \textbf{主要组织者}, RSS 2023《机器人学习中的对称性》研讨会
+\vspace{-7pt}
+\item \textbf{组织者}, RSS 2024《机器人学习中的几何与代数结构》研讨会
+\vspace{-7pt}
+\item \textbf{审稿人}: IJRR2024. ICML 2024. ICLR 2023-2025. NeurIPS 2023. ICRA 2019, 2022-2024. CoRL 2022-2024. IROS 2021, 2023. RAL 2022-2024. T-RO 2022.
+}
+% \vspace{-5pt}
+\resumeSubHeadingListEnd
+
+
+\section{教学经历}
+\resumeSubHeadingListStart
+\resumeSubheading{助教}{}{强化学习与序列决策（东北大学 CS5180），Chris Amato教授}{2024年秋季}
+\clearpage
+\resumeSubheading{特邀讲座：《机器人操作的等变策略学习》}{}{算法机器人学（莱斯大学 Comp550），Lydia Kavraki教授}{2024.11}
+\resumeSubheading{特邀讲座：《机器人操作的等变强化学习》}{}{强化学习与序列决策（东北大学 CS5180），Lawson Wong教授}{2024.04}
+\resumeSubheading{特邀讲座：《机器人操作的等变学习》}{}{几何深度学习（东北大学 CS7180），Robin Walters教授}{2023.04}
+\resumeSubheading{特邀讲座：《机器人学习中利用SE(2)对称性》}{}{机器人科学与系统（东北大学 CS5335），Robert Platt教授}{2022.03}
 \vspace{3pt}
 \resumeSubHeadingListEnd
 
-\section{Mentoring}
+\section{学生指导}
 \vspace{-2pt}
 \resumeSubHeadingListStart
 \item
 \small
 \begin{tabular*}{0.97\textwidth}[t]{p{0.13\textwidth}p{0.26\textwidth}p{0.38\textwidth}P{0.2\textwidth}}
-Rachel Lim &  M.S. at Northeastern & &\textit{Oct. 2024 - Present}\\
-Yizhe Zhu &  M.S. at Northeastern & &\textit{Oct. 2024 - Present}\\
-Haibo Zhao &  M.S. at Northeastern & &\textit{Nov. 2023 - Present}\\
-Mingxi Jia &  M.S. at Northeastern & Now Ph.D. Student at Brown&\textit{Dec. 2021 - May 2023}\\
-Guanang Su &  M.S. at Northeastern & Now Ph.D. Student at Univ. of Minnesota&\textit{Dec. 2021 - May 2023}\\
-Neel Sortur & Undergrad. at Northeastern & Now M.S. Student at Northeastern & \textit{May 2021 - Oct. 2022}\\
-Zhengyi Ou & M.S. at Northeastern & Now Software Engineer at Medtronic& \textit{Sept. 2020 - Dec. 2021}\\
-Yida Niu & M.S. at Northeastern & Now Ph.D. Student at Peking University & \textit{Sept. 2020 - Aug. 2021}\\
+Haibo Zhao & 东北大学硕士生 & 在读 &{2023.11 - 至今}\\
+Mingxi Jia & 东北大学硕士生 & 现为布朗大学博士生 &{2021.12 - 2023.05}\\
+Guanang Su & 东北大学硕士生 & 现为明尼苏达大学博士生 &{2021.12 - 2023.05}\\
+Neel Sortur & 东北大学本科生 & 现为东北大学硕士生 & {2021.05 - 2022.10}\\
+Zhengyi Ou & 东北大学硕士生 & 现为美敦力公司软件工程师 & {2020.09 - 2021.12}\\
+Yida Niu & 东北大学硕士生 & 现为北京大学博士生 & {2020.09 - 2021.08}\\
 \end{tabular*}
-% \vspace{-8pt}
-% \resumeMentorHeading{Mingxi Jia}{M.S. Student at Northeastern University}{Dec. 2021 - Present}
-% \resumeMentorHeading{Guanang Su}{M.S. Student at Northeastern University}{Dec. 2021 - Present}
-% \resumeMentorHeading{Neel Sortur}{Undergraduate Student at Northeastern University}{May 2021 - Oct. 2022}
-% \resumeMentorHeading{Zhengyi Ou}{M.S. Student at Northeastern University}{Sept. 2020 - Dec. 2021}
-% \resumeMentorHeading{Yida Niu}{M.S. Student at Northeastern University}{Sept. 2020 - Aug. 2021}
-% \resumeMentorHeading{Jing Xie}{M.S. Student at Northeastern University}{June 2019 - Jan. 2020}
-\resumeSubHeadingListEnd
-
-\section{Professional Service}
-\resumeSubHeadingListStart
-\small{
-\item \textbf{Lead Organizer}, RSS 2023 Workshop on Symmetries in Robot Learning
-\vspace{-7pt}
-\item \textbf{Organizer}, RSS 2024 Workshop on Geometric and Algebraic Structure in Robot Learning
-\vspace{-7pt}
-\item \textbf{Reviewer}: RSS 2025, IJRR2024. ICML 2024. ICLR 2023-2025. NeurIPS 2023. ICRA 2019, 2022-2024. CoRL 2022-2024. IROS 2021, 2023. RAL 2022-2024. T-RO 2022.
-}
-% \vspace{-5pt}
 \resumeSubHeadingListEnd
 
 %----------- AWARDS & ACHIEVEMENTS -----------
 
-\section{Media Coverage}
+% \section{Media Coverage}
+% \resumeSubHeadingListStart
+% \item
+% \small
+% \begin{tabular*}{0.97\textwidth}[t]{p{0.85\textwidth}P{0.12\textwidth}}
+% Khoury Story: Dian on Researching Machine Learning and Robotics, \href{https://www.youtube.com/watch?v=B9g2yhHs5Wg}{\underline{Link}} &{June 2024}\\
+% Institute for Experiential Robotics Newsletter, Dian Wang - CoRL 2022 Presentation &{Jan. 2023}\\
+% Northeastern Global News, photo by Matthew Modoono, \href{https://news.northeastern.edu/2020/09/28/machine-learning/}{\underline{Link}} &{Sept. 2020}\\
+% IEEE Spectrum Video Friday, \href{https://spectrum.ieee.org/video-friday-misty-robotics-shipping-programmable-personal-robot}{\underline{Link}} &{Sept. 2019}\\
+% \end{tabular*}
+% \resumeSubHeadingListEnd
+
+\section{媒体报道}
 \resumeSubHeadingListStart
 \item
 \small
 \begin{tabular*}{0.97\textwidth}[t]{p{0.85\textwidth}P{0.12\textwidth}}
-Khoury Story: Dian on Researching Machine Learning and Robotics, \href{https://www.youtube.com/watch?v=B9g2yhHs5Wg}{\underline{Link}} &\textit{June 2024}\\
-Institute for Experiential Robotics Newsletter, Dian Wang - CoRL 2022 Presentation &\textit{Jan. 2023}\\
-Northeastern Global News, photo by Matthew Modoono, \href{https://news.northeastern.edu/2020/09/28/machine-learning/}{\underline{Link}} &\textit{Sept. 2020}\\
-IEEE Spectrum Video Friday, \href{https://spectrum.ieee.org/video-friday-misty-robotics-shipping-programmable-personal-robot}{\underline{Link}} &\textit{Sept. 2019}\\
+Khoury Story采访：《王点的机器学习与机器人研究》，\href{https://www.youtube.com/watch?v=B9g2yhHs5Wg}{\underline{链接}} &{2024.06}\\
+东北大学实验机器人研究所简报，《王点 - CoRL 2022演讲》 &{2023.01}\\
+东北大学全球新闻，《每日新闻：机器学习》摄影：Matthew Modoono，\href{https://news.northeastern.edu/2020/09/28/machine-learning/}{\underline{链接}} &{2020.09}\\
+IEEE Spectrum每周视频，《面向开放世界环境的辅助机器人抓取与放置》，\href{https://spectrum.ieee.org/video-friday-misty-robotics-shipping-programmable-personal-robot}{\underline{链接}} &{2019.09}\\
 \end{tabular*}
 \resumeSubHeadingListEnd
 
-\section{Outreach}
+\section{公共服务}
 \resumeSubHeadingListStart
 \item
 \small
 \begin{tabular*}{0.97\textwidth}[t]{p{0.85\textwidth}P{0.12\textwidth}}
-AI in Action - Everyday Robotics, presentation and demo at Northeastern University & \textit{Apr. 2024}\\
+人工智能实践 - 日常机器人，在东北大学进行演示和展示 & {2024.04}\\
 \end{tabular*}
 \resumeSubHeadingListEnd
 
-\section{Talks and Oral Presentations}
+\section{学术报告与演讲}
 \resumeSubHeadingListStart
 \vspace{-4pt}\item
 \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-\textbf{\small Equivariant Policy Learning for Robotic Manipulation} & \small  \\
-\textit{\small McGill University} & \textit{\small Nov. 2024} \\
-\textit{\small WPI} & \textit{\small Nov. 2024} \\
-\textit{\small UT Austin} & \textit{\small Nov. 2024} \\
-\textit{\small Texas A\&M University} & \textit{\small Nov. 2024} \\
-\textit{\small TU Munich
-} & \textit{\small Nov. 2024} \\
-\textit{\small Next-Gen Robot Learning Symposium at TU Darmstadt
-} & \textit{\small Nov. 2024} \\
-\textit{\small Stanford University
-} & \textit{\small Oct. 2024} \\
+\textbf{\small 《机器人操作的等变策略学习》} & \small  \\
+% \small \textbf{（Equivariant Policy Learning for Robotic Manipulation）} & \\
+{\small 清华大学} & {\small 2024.12} \\
+{\small 西湖大学} & {\small 2024.12} \\
+{\small 麦吉尔大学 McGill University} & {\small 2024.11} \\
+{\small 伍斯特理工学院 WPI} & {\small 2024.11} \\
+{\small 德克萨斯大学奥斯汀分校 UT Austin} & {\small 2024.11} \\
+{\small 德克萨斯农工大学 Texas A\&M University} & {\small 2024.11} \\
+{\small 慕尼黑工业大学 TU Munich} & {\small 2024.11} \\
+{\small 达姆施塔特工业大学《下一代机器人学习》研讨会} & {\small 2024.11} \\
+{\small 斯坦福大学 Stanford University} & {\small 2024.10} \\
+{\small 加州大学圣地亚哥分校 University of California, San Diego} & {\small 2024.10} \\
+{\small 波士顿大学 Boston University} & {\small 2024.10} \\
+{\small 宾夕法尼亚大学《GRASP SFI》研讨会 GRASP SFI Seminar, University of Pennsylvania} & {\small 2024.09} \\
+{\small 华盛顿大学 University of Washington} & {\small 2024.09} \\
+{\small 卡内基梅隆大学 Carnegie Mellon University} & {\small 2024.06} \\
+{\small 布朗大学 Brown University} & {\small 2024.06; 2023.04} \\
+{\small Boston Robotics演讲系列，由Universal Robots主办} & {\small 2023.03} \\
 \end{tabular*}
-\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-\textit{\small University of California, San Diego
-} & \textit{\small Oct. 2024} \\
-\textit{\small Boston University
-} & \textit{\small Oct. 2024} \\
-\textit{\small GRASP SFI Seminar, 
-University of Pennsylvania
-} & \textit{\small Sept. 2024} \\
-\textit{\small 
-University of Washington
-} & \textit{\small Sept. 2024} \\
-\textit{\small Carnegie Mellon University
-} & \textit{\small June 2024} \\
-\textit{\small Brown University} & \textit{\small June 2024; Apr. 2023} \\
-\textit{\small Boston Robotics Speaker Series, presented by Universal Robots} & \textit{\small Mar. 2023} \\
-\end{tabular*}\vspace{-7pt}
-% \resumeSubheading
-% {A General Theory of Correct, Incorrect, and Extrinsic Equivariance}{New Orleans, USA}
-% {Conference on Neural Information Processing Systems (NeurIPS) 2023}{Dec. 2023}
-% \resumeSubheading
-% {The Surprising Effectiveness of Equivariant Models in Domains with Latent Symmetry}{New Orleans, USA}
-% {NeurIPS 2023 Workshop on Symmetry and Geometry in Neural Representations}{Dec. 2023}
-% \resumeSubheading
-% {Correct, Incorrect, and Extrinsic Equivariance}{New York City, NY, USA}
-% {NSF-Simons Mathematical and Scientific Foundations of Deep Learning Annual Meeting}{Sept. 2023}
-\resumeSubheading
-{Equivariant Diffusion Policy}{Munich, Germany}
-{Conference on Robot Learning (CoRL) 2024}{Nov. 2024}
-\resumeSubheading
-{Pushing the Limits of Equivariant Neural Networks (with Robin Walters)}{Cambridge, MA, USA}
-{NeurReps Global Speaker Series at MIT}{Oct. 2024}
-\resumeSubheading
-{Equivariant Models for Long-Horizon Manipulation}{Cambridge, MA, USA}
-{Boston Dynamics AI Institute}{Mar. 2024}
-\resumeSubheading
-{The Surprising Effectiveness of Equivariant Models in Domains with Latent Symmetry}{Kigali, Rwanda}
-{International Conference on Learning Representations (ICLR) 2023}{May 2023}
-% \resumeSubheading
-% {Equivariant Learning for Robotic Manipulation}{Providence, RI, USA}
-% {Department of Computer Science, Brown University}{Apr. 2023}
-% \resumeSubheading
-% {Equivariant Learning for Robotic Manipulation}{Boston, MA, USA}
-% {Boston Robotics Speaker Series, presented by Universal Robots}{Mar. 2023}
-% \resumeSubheading
-% {On-Robot Learning with Equivariant Models}{Auckland, New Zealand}
-% {Conference on Robot Learning (CoRL) 2022}{Dec. 2022}
-% \resumeSubheading{Graph-Based SE(3)-invariant Approach to Grasp Detection}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
-% \resumeSubheading{SEIL: Simulation-augmented Equivariant Imitation Learning}{Auckland, New Zealand}{CoRL 2022 Workshop on Sim-to-Real Robot Learning}{Dec. 2022}
-% \resumeSubheading{Equivariant Reinforcement Learning for Robotic Manipulation}{Providence, RI, USA}{The Multi-disciplinary Conference on Reinforcement Learning and Decision Making 2022}{June 2022}
-\resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{New York City, NY, USA}{RSS 2022 Workshop on Scaling Robot Learning
-}{June 2022}
-\resumeSubheading{SO(2)-Equivariant Reinforcement Learning for Robotic Manipulation}{Philadelphia, PA, USA}{ICRA 2022 Workshop on Scaling Robot Learning}{May 2022}
-% \resumeSubheading{SO(2)-Equivariant Reinforcement Learning }{Online}{International Conference on Learning Representations (ICLR) 2022}{Apr. 2022}
-% \resumeSubheading{Equivariant Q Learning in Spatial Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2021}{Nov. 2021}
-% \resumeSubheading{Policy Learning in SE(3) Action Spaces}{Online}{Conference on Robot Learning (CoRL) 2020}{Nov. 2020}
-% \resumeSubheading{Imitation Learning with Pixel-Wise Action Parametrization}{Boston, MA, USA}{M.S. Thesis Defense, Khoury College of Computer Sciences, Northeastern University}{Dec. 2019}
-\resumeSubheading{Towards Assistive Robotic Pick and Place in Open World Environments}{Hanoi, Vietnam}{The International Symposium on Robotics Research (ISRR) 2019}{Dec. 2019}
+\vspace{-3pt}
+
+\resumeSubheading{《等变扩散策略》}{德国慕尼黑}
+{机器人学习会议 (CoRL) 2024}{2024.11}
+\resumeSubheading{《等变神经网络的前沿探索》（与Robin Walters合作）}{美国马萨诸塞州剑桥}
+{MIT NeurReps全球演讲系列}{2024.10}
+\resumeSubheading{《长期操作任务中的等变模型》}{美国马萨诸塞州剑桥}
+{波士顿动力人工智能研究院}{2024.03}
+\resumeSubheading{《潜在对称域中等变模型的惊人效果》}{卢旺达基加利}
+{国际学习表征会议 (ICLR) 2023}{2023.05}
+\resumeSubheading{《空间动作空间中的等变Q学习》}{美国纽约市}
+{RSS 2022《机器人学习扩展》研讨会}{2022.06}
+\resumeSubheading{《面向机器人操作的SO(2)等变强化学习》}{美国宾夕法尼亚州费城}
+{ICRA 2022《机器人学习扩展》研讨会}{2022.05}
+\resumeSubheading{《面向开放世界环境的辅助机器人抓取与放置》}{越南河内}
+{国际机器人研究研讨会 (ISRR) 2019}{2019.12}
 \vspace{1pt}
 \resumeSubHeadingListEnd
 
